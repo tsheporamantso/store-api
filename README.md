@@ -3,7 +3,6 @@
 <div align="center">
 
   <h1><b> STORE 🛍️</b></h1>
-  <img src ="./image.png" width="900">
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -34,7 +33,7 @@
 
 # 📖 STORE 🛍️<a name="about-project"></a>
 
-**STORE 🛍️** Restful API that collects Web Engineers name, favorite tech stack and employment status, built with NodeJS, ExpressJS , Non Relational Database MongoDB and Mongoose Modelling library.
+**STORE 🛍️** E-Commerce Restful API built with NodeJS, ExpressJS , Non Relational Database MongoDB and Mongoose Modelling library.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -168,7 +167,7 @@ Not deployed
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/tsheporamantso/aliens/issues).
+Feel free to check the [issues page](https://github.com/tsheporamantso/store-api/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -194,6 +193,6 @@ I would like to thank:
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/tsheporamantso/task-manager-api/blob/7b1ac7df847508247c81cf6ca6ef8e59bcb49ec1/LICENSE) licensed.
+This project is [MIT](https://github.com/tsheporamantso/store-api/blob/dda76280353e0c0a89a86f5581cefa3c5e037f14/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
