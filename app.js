@@ -1,6 +1,7 @@
 const express = require('express');
 const products = require('./routes/products');
 const connectDB = require('./db/connect');
+const notFound = require('./middleware/not-found');
 require('dotenv').config();
 
 const app = express();
@@ -10,6 +11,7 @@ const app = express();
 */
 app.use('/api/v1/products', products);
 app.use(express.json());
+app.use(notFound);
 
 /*
 ! Routes
