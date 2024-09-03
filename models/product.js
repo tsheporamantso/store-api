@@ -11,7 +11,7 @@ const productsSchema = new mongoose.Schema({
   },
   featured: {
     type: Boolean,
-    deafult: false,
+    default: false,
   },
   rating: {
     type: Number,
