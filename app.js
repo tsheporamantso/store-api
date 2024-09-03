@@ -1,7 +1,9 @@
 const express = require('express');
-const products = require('./routes/products');
+const productsRouter = require('./routes/products');
 const notFoundMiddleware = require('./middleware/not-found');
+const errorHandlerMiddleware = require('./middleware/error-handler');
 require('dotenv').config();
+require('express-async-errors');
 
 const app = express();
 
@@ -14,10 +16,11 @@ app.get('/', (req, res) => {
     .status(200)
     .send('<h1>STORE API🛍️</h1><a href="/api/v1/products">Products Route</a>');
 });
-app.use('/api/v1/products', products);
+app.use('/api/v1/products', productsRouter);
 
 // products routes
 app.use(notFoundMiddleware);
+app.use(errorHandlerMiddleware);
 
 const PORT = process.env.PORT || 3000;
 
