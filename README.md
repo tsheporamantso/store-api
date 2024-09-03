@@ -33,7 +33,7 @@
 
 # 📖 STORE 🛍️<a name="about-project"></a>
 
-**STORE 🛍️** E-Commerce Restful API built with NodeJS, ExpressJS , Non Relational Database MongoDB and Mongoose Modelling library.
+**STORE 🛍️** Restful API built with NodeJS, ExpressJS, NoSQL MongoDB and Mongoose Modelling library, user can filter, sort and limit data with query string params. 
 
 ## 🛠 Built With <a name="built-with"></a>
 
