@@ -1,0 +1,12 @@
+{
+  "name": "store-api",
+  "version": "1.0.0",
+  "description": "<a name=\"readme-top\"></a>",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
