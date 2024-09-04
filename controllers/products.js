@@ -28,25 +28,6 @@ const getAllProducts = async (req, res) => {
   if (name) {
     queryObject.name = { $regex: name, $options: 'i' };
   }
-  let results = Product.find(queryObject);
-
-  if (sort) {
-    const sortList = sort.split(',').join(' ');
-    results = results.sort(sortList);
-  } else {
-    results = results.sort('createdAt');
-  }
-
-  if (fields) {
-    const fieldsList = fields.split(',').join(' ');
-    results = results.select(fieldsList);
-  }
-
-  const page = +req.query.page || 1;
-  const limit = +req.query.limit || 10;
-  const skip = (page - 1) * limit;
-
-  results = results.skip(skip).limit(limit);
 
   if (numericFilters) {
     const operatorMap = {
@@ -71,7 +52,26 @@ const getAllProducts = async (req, res) => {
       }
     });
   }
-  console.log(queryObject);
+
+  let results = Product.find(queryObject);
+
+  if (sort) {
+    const sortList = sort.split(',').join(' ');
+    results = results.sort(sortList);
+  } else {
+    results = results.sort('createdAt');
+  }
+
+  if (fields) {
+    const fieldsList = fields.split(',').join(' ');
+    results = results.select(fieldsList);
+  }
+
+  const page = +req.query.page || 1;
+  const limit = +req.query.limit || 10;
+  const skip = (page - 1) * limit;
+
+  results = results.skip(skip).limit(limit);
   const products = await results;
   res.status(200).json({ nbHits: products.length, products });
 };
